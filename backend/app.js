@@ -4,7 +4,7 @@ const cors = require("cors");
 const bodyParser = require ('body-parser');
 const mongoose = require('mongoose');
 
-const bookRoutes = require('./routes/book');
+const bookRoutes = require('./routes/books');
 const userRoutes = require('./routes/user');
 const path = require('path');
 
