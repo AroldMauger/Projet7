@@ -1,6 +1,7 @@
 const Book = require('../models/Book');
 const fs = require('fs');
 
+
 exports.createBook = (req, res, next) => {
   const bookObject = JSON.parse(req.body.book);
   delete bookObject._id;
@@ -86,3 +87,21 @@ exports.getAllBooks = (req, res, next) => {
     }
   );
 };
+
+
+exports.getBestBooks = (req, res) => {
+  Book.find()
+  //trier les résultats en fonction de "averageRating" dans l'ordre décroissanté//
+    .sort({ averageRating: -1 }) 
+  //limiter les résultats à 3 livres//
+    .limit(3)
+    .then((books) => {
+      res.send(books)
+    })
+    .catch((error) => {
+      res.status(400).send("Une erreur est survenue" + error.message);
+    });
+};
+
+
+
