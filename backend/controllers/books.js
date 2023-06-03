@@ -103,5 +103,48 @@ exports.getBestBooks = (req, res) => {
     });
 };
 
+exports.postRating = (req, res) => {
+  const id = req.params.id;
 
+  Book.findById(id).then(book => {
+    if (book == null) {
+      res.status(404).send("Livre non trouvé");
+      return;
+    }
+    const rating = req.body.rating;
+    const userId = req.auth.userId;
+    const ratingsInDb = book.ratings;
+    
+    //On vérifie sur l'utilisateur a déjà noté le livre en cherchant dans le rating l'userId qui correspond à celui du token//
+    const previousRatingFromCurrentUser = ratingsInDb.find((rating) => rating.userId == userId);
+    if (previousRatingFromCurrentUser != null) {
+        res.status(400).send("Vous avez déjà noté ce livre")
+        return;
+    }
+    const newRating = {
+      userId: userId,
+      grade: rating,
+    };
 
+    ratingsInDb.push(newRating);
+    book.averageRating = calculateAverageRating(ratingsInDb);
+      book.save().then(() => {
+        
+        res.status(200).json(book)
+      })
+      .catch(
+        (error) => {
+          res.status(400).json({
+            error: error
+          });
+        }
+      );
+    })
+  }
+
+function calculateAverageRating (ratings) {
+  const length = ratings.length;
+  const sumOfAllGrades = ratings.reduce((sum, rating) => sum + rating.grade, 0);
+  const averageRating = sumOfAllGrades / length;
+  return averageRating;
+  }
