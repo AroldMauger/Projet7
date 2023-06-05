@@ -1,6 +1,7 @@
 const express = require('express');
 require("dotenv").config();
 const cors = require("cors");
+const bodyParser = require ('body-parser');
 const mongoose = require('mongoose');
 
 const bookRoutes = require('./routes/books');
@@ -8,6 +9,8 @@ const userRoutes = require('./routes/user');
 const path = require('path');
 
 const app = express();
+
+const PORT = process.env.PORT || 4000;
 
 // Connexion à la base de données MongoDB //
 mongoose.connect(`mongodb+srv://${process.env.USER_MONGO}:${process.env.PASSWORD_MONGO}@${process.env.DOMAIN_MONGO}`,
@@ -20,6 +23,7 @@ mongoose.connect(`mongodb+srv://${process.env.USER_MONGO}:${process.env.PASSWORD
 // Toutes les routes appliqueront les règles de CORS//
   app.use(cors());  
 // Configuration du middleware pour analyser les requêtes au format JSON //
+  app.use(bodyParser.json());
   app.use(express.json())
 
 // Configuration CORS //
