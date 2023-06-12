@@ -1,5 +1,5 @@
 const Book = require('../models/Book');
-const fs = require('fs');
+const fs = require('fs'); // module de NodeJs pour modifier/supprimer des fichiers et des dossiers//
 
 // --- CRÉATION D'UN LIVRE --- //
 exports.createBook = (req, res, next) => {
@@ -84,7 +84,7 @@ exports.deleteBook = (req, res, next) => {
 };
 
 // --- RÉCUPÉRER TOUS LES LIVRES --- //
-exports.getAllBooks = (req, res, next) => {
+exports.getAllBooks = (req, res) => {
   Book.find().then(
     (books) => {
       res.status(200).json(books);
