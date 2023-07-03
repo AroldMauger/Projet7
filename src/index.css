@@ -50,7 +50,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F2E3CE;
+  background-color: royalblue;
 }
 
 code {
@@ -75,17 +75,17 @@ code {
   width: 90%;
   max-width: 1320px;
   margin: auto;
-  padding-block: 5em;
+  padding-block: 20px;
 
 }
 
 .backArrow {
   display: block;
-  margin-bottom: 5em;
-  color: #796157;
-  font-family: "DM Sans", sans-serif;
-
+  margin-bottom: 20px;
+  color: white;
+  font-family: 'Uncial Antiqua', cursive;
   text-decoration: none;
+  font-size: 20px;
 }
 
 h1 {
@@ -96,11 +96,11 @@ h1 {
 }
 
 button, .button {
-  color: #2C1810;
-  background-color: #D9A963;
+  color: white;
+  background-color: royalblue;
   text-decoration: none;
-  padding: 20px;
-  border-radius: 5px;
+  padding-inline: 50px;
+  padding-block: 20px;
   border: none;
   font-size: 16px;
   transition: 0.5s;
@@ -108,7 +108,7 @@ button, .button {
 
 button:hover, .button:hover {
   text-decoration: none;
-  background-color: #B99056;
+  background-color: darkmagenta;
   color: #fff;
   transition: 0.5s;
 }

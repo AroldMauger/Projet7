@@ -1,14 +1,22 @@
 .Header{
     font-family: 'Libre Baskerville', serif;
-    background-color: #FFFFFF;
+    background-color: black;
     min-height: 91px;
     display: flex;
     align-items: center;
+    color:white;
+    transition: 0.5s;
+}
+
+
+.navigation_titre li {
+    color:red;
 }
 
 .Header div {
     display: flex;
     justify-content: space-between;
+
 }
 
 .Header p {
@@ -19,14 +27,46 @@
     display: flex;
 }
 
+.title {
+    text-decoration: none;
+    color:white;
+    padding-left:50px;
+    font-size: x-large;
+    font-family: 'Uncial Antiqua', cursive;
+    letter-spacing : 1px;
+    transition: 0.5s;
+}
+
+.title:hover {
+    color:darkmagenta;
+    transition: 0.5s;
+}
+
 .Header ul li {
     padding-inline: 20px;
     list-style-type: none;
+    font-family: 'Uncial Antiqua', cursive;
+    font-size: larger;
+    color:white;
+    transition: 0.5s;
+}
+.Header ul li :hover{
+    color:darkmagenta;
+    transition: 0.5s;
 }
 
 .Header ul li a {
     text-decoration: none;
-    color: black ;
+    color:white;
+    font-family: 'Uncial Antiqua', cursive;
+    font-size: larger;
+    transition: 0.5s;
+}
+
+
+.Header ul li a:hover {
+    color:darkmagenta;
+    transition: 0.5s;
 }
 
 .Header a.activeLink {

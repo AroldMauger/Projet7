@@ -1,33 +1,39 @@
 .BookItem{
     display: flex;
+    justify-content: center;
     text-decoration: none;
     color: inherit;
     max-width: 360px;
     width: 80%;
     align-items: center;
-    margin-bottom: 85px;
+    margin-bottom: 10px;
+    padding-top: 50px;
 }
 .BookItem article {
     display: flex;
     align-items: center;
-}
 
+}
 
 .BookItem img {
     border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.BookItem h2 {
-    font-size: 18px;
+
+.BookItem h2 { /* Les titres en dessous des cards */
+    font-size: 25px;
     font-weight: 700;
-    font-family: "Libre Baskerville", serif;
+    font-family: 'Modern Antiqua', cursive;
     margin-bottom: 10px ;
+    box-shadow: inset 0px 0px 20px darkmagenta;
+    padding:5px;
 }
 
 .BookImage {
-    width: 206px;
+    width: 260px;
     height: 260px;
     object-position: center;
-    object-fit: contain;
+    object-fit: cover;
 }
 .BookItem h3 {
     font-size: 18px;
@@ -41,24 +47,26 @@
     color: #796157;
     margin-bottom: 10px ;
 }
-.full {
-    color: #D9A963;
-    font-size: 23px;
-}
-.empty {
-    color : #F2E3CE;
-    font-size: 23px;
-}
+
 .BookInfo {
     display: flex;
     flex: 1;
     flex-direction: column;
     margin-left: 18px;
+    color:white;
+    font-size:xx-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .Rating{
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+}
+
+.BookContainer {
+    display: flex;
+    flex-direction: column;
+    gap : 5px;
 }
 
 @media all and (max-width: 600px) {

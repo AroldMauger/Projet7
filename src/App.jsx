@@ -7,7 +7,6 @@ import Home from './pages/Home/Home';
 import Book from './pages/Book/Book';
 import { APP_ROUTES } from './utils/constants';
 import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
 import AddBook from './pages/AddBook/AddBook';
 import UpdateBook from './pages/updateBook/UpdateBook';
 import { useUser } from './lib/customHooks';
@@ -32,7 +31,6 @@ function App() {
           <Route path={APP_ROUTES.UPDATE_BOOK} element={<UpdateBook />} />
           <Route path={APP_ROUTES.ADD_BOOK} element={<AddBook />} />
         </Routes>
-        <Footer />
       </div>
     </BrowserRouter>
   );

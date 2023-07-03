@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    color:white;
 }
 
 .Notification {
@@ -18,21 +19,23 @@
     box-sizing: border-box;
     width: 100%;
     padding: 20px 50px;
-    background-color: #F9F3EE;
+    background-color: black;
     border: solid 2px #D9A963;
+
 }
 .Form {
     display: flex;
     flex-direction: column;
+
 }
 
 .Form{
-    background-color: #F9F3EE;
+    background-color: black;
     width: 30%;
     margin: auto;
     padding: 50px;
     align-items: center;
-    margin-block: 50px;
+    margin-block: 6px;
 
 }
 .Form, .Form label {
@@ -41,6 +44,7 @@
     font-family: "DM Sans", sans-serif;
     font-size: 18px;
     line-height: 24px;
+    font-family: 'Uncial Antiqua', cursive;
 
 }
 
@@ -72,10 +76,12 @@
 .Submit {
     display: flex;
     align-items: center;
+    
 }
 
 .Submit span {
     margin-inline: 20px;
+    font-family: 'Uncial Antiqua', cursive;
 }
 
 @media all and (max-width: 1300px) {

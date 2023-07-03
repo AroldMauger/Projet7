@@ -1,27 +1,27 @@
 .Book {
-    padding-block: 5em;
+    padding-block: 2em;
     display: flex;
-    align-items: stretch;
-
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 .BookContainer {
-    background-color: #FFFFFF;
-    margin: auto;
+    background-color: black;
     border-radius: 7px;
     box-shadow:  0 4px 34px rgba(0, 0, 0, 0.07);
     box-sizing: border-box;
+    
 }
 
 .BookContainer hr {
-    width: 60%;
     border-color: transparent;
     background-color: #F2E3CE;
     height: 1px;
 }
 .Deleted {
-    font-family: "Libre Baskerville", serif;
-    padding-block: 5em;
-    background-color: #FFFFFF;
+    font-family: 'Modern Antiqua', cursive;
+    padding-block: 120px;
+    background-color: black;
     margin: auto;
     border-radius: 7px;
     box-shadow:  0 4px 34px rgba(0, 0, 0, 0.07);
@@ -29,6 +29,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    color:white;
 
 }
 
@@ -36,7 +37,7 @@
 
     font-size: 44px;
     font-style: italic;
-    color: #796157;
+    color: white;
     padding-bottom: 15px;
 }
 .Deleted p {
@@ -48,64 +49,21 @@
     margin-bottom: 75px;
 }
 .BookImage {
-    width: calc(40% - 80px);
+    width: 100%;
+    height: 600px;
     background-position: center;
-    background-size: cover;
-    margin-right: 80px;
-    margin-left: 120px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 20px;
 }
 .Book img {
-    width: 40%;
-    padding-right: 80px;
-    padding-left: 120px;
+    width: 100%;
 }
 .BookContent {
-    width: 60%;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
 }
 
-.Owner {
-
-}
-.BookInfo {
-    display: grid;
-    width: 100%;
-    max-width: 465px;
-    grid-template-rows: 125px 65px 65px;
-    grid-template-columns: 1fr 1fr 1fr;
-    box-sizing: border-box;
-    gap: 1px;
-}
-.BookInfo > * {
-    outline: 1px solid #000;
-    display: flex;
-    align-items: center;
-}
-.BookInfo h1 {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    font-size: 28px;
-    padding-left: 20px;
-}
-
-.Author {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    padding-left: 20px;
-}
-
-.PublishDate, .Genre, .Rating {
-    justify-content: center;
-}
-
-.Rating {
-    grid-column-start: 2;
-    grid-column-end: 4;
-}
-.Rating div {
-    margin-right: 20px;
-}
 
 .Book form {
     position: relative;
@@ -159,7 +117,11 @@
     color: #D70000;
     cursor: pointer;
     text-decoration: underline;
+    font-family: 'Modern Antiqua', cursive;
 }
+
+
+
 @media all and (max-width: 1080px) {
     .Book {
         flex-direction: column;
